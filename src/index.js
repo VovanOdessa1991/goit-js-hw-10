@@ -1,4 +1,5 @@
 console.log('ndfjnsdjsdd');
+import Notiflix from 'notiflix';
 import './css/styles.css';
 import debounce from 'lodash.debounce';
 
@@ -15,6 +16,7 @@ inputBox.addEventListener('input', debounce(inputCountry, DEBOUNCE_DELAY) );
 
 
 function inputCountry(event) {
+   
    if (event.target.value.length === 0) {
       return;
    }
@@ -25,18 +27,7 @@ function inputCountry(event) {
 function addCountriList(name) {
 
    countryList.insertAdjacentHTML("beforeend", `<li>test ${name}</li>`);
-   const listPromise = fetch(`https://restcountries.com/v3.1/name/${name}?fields=name,capital,flags.svg,languages,population`)
-      .then(res => res.json()).then(country => {
-        
-         if (country.length >= 20){
-            console.log("ALERT Low word!@!!!@@@@")
-            return;
-         }
-         console.log(country, country.length)
-      })
-      .catch(err => {
-         console.log('oib,rf', err)
-      });
+ 
       // console.log(list);
     
 }
