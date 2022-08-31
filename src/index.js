@@ -21,6 +21,8 @@ function inputCountry(event) {
    if (event.target.value.length === 0) {
       return;
    }
+
+   
    // console.log("event leng" , event.target.value.length);
    addCountriList(event.target.value.trim());
 }
