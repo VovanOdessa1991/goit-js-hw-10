@@ -10,7 +10,7 @@ const inputBox = document.querySelector('#search-box');
 const countryList = document.querySelector(".country-list");
 
 const divTest = document.querySelector(".country-info");
-
+let buffer = [];
 // console.log(countryList);
 
 inputBox.addEventListener('input', debounce(inputCountry, DEBOUNCE_DELAY) );
@@ -57,7 +57,7 @@ function listGenerator(prom) {
          }
    // prom.then(res => res.json()).then(data => console.log('prom data!', prom , prom.length));
    //  console.log("!11!", prom.length);
-   let buffer = [];
+   
 
    if (prom.length === 1) {
       clearAll();
