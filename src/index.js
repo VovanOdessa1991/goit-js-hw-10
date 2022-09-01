@@ -63,7 +63,7 @@ function listGenerator(prom) {
       clearAll();
       // console.log("sjdasdhsdjasbashsbhd");
       let languagesBufer = prom[0].languages.toString();
-      for (key in prom[0].languages){
+      for (const key in prom[0].languages){
          buffer.push(prom[0].languages[key]);
       };
 
